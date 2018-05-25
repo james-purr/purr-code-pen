@@ -1,0 +1,23 @@
+= render 'form', snippet: @snippet
+- @snippets.each_slice(2) do |snippets|
+  .card-group
+    -snippets.each do |snippet|
+      .card.col-6
+        / %img.card-img-top{:alt => "Card image cap", :src => "..."}/
+        .card-body
+          %h5.card-title 
+            =snippet.name
+          %p.card-text.description
+            =snippet.description
+          %p.card-text
+            %small.text-muted 
+              Added on #{snippet.created_at.strftime('%D')}
+          .code-display
+            =snippet.code.html_safe
+          .tags-display
+            -if snippet.tags.any?
+              -snippet.tags.each do |tag|     
+                %span.tag-item
+                  =tag.name
+
+

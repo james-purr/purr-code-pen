@@ -1,0 +1,191 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import "bootstrap";
+@import "froala_editor.min";
+@import "froala_style.min";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+header{
+    background-color: #df00671f;
+	margin-bottom: 30px;
+}  
+
+form{
+	margin-bottom:40px;
+} 
+
+h3{
+	font-weight: 500;
+	margin-bottom: 27px;
+	font-size: 16px;
+}
+
+label{
+	font-weight: 100;
+}
+
+// #snippet_code{
+// //     min-height: 200px;
+// //     background: black;
+
+   
+// // }
+
+.fr-wrapper{
+	min-height: 177px;
+    background: black!important;
+	font-family: monospace;
+	color:white;
+	p{
+		color: white!important;
+    	font-size: 14px;	
+    	margin-bottom: 0.2rem;	
+	}
+}
+
+.code-display{
+    background: black;
+    color: white !important;
+    font-size: 14px;
+    font-family: monospace;
+    height: 135px;
+    padding: 20px;
+    overflow-y: scroll;
+    p{
+	    color: white !important;
+	    font-size: 14px;
+	    font-family: monospace;
+	    margin-bottom: 0.2rem;
+		line-height: 16px;
+    }
+}
+
+.description{
+	height: 50px;
+    font-family: Helvetica Neue;
+    color: #ffffffba;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.card-group{
+	.card{
+		background-color: #DF0067;
+    	margin-left: 2%;
+	    margin-right: 2%;
+	    margin-bottom: 2%;
+	    border-radius: 6px;		
+	}
+}
+
+.card-title{
+    color: white;
+    font-weight: 200;
+    font-size: 23px;	
+}
+
+.card-text{
+	small{
+		color:white!important;
+		font-family: Helvetica Neue;
+	}
+}
+
+.tag-container{
+    margin-top: 13px;
+    margin-bottom: 30px;
+    h5{
+    	font-weight: 100;
+    	font-size: 17px;
+    }
+    .select2-selection__choice{
+	    padding: 3px !important;
+	    background-color: #DF0067 !important;
+	    color: white !important;
+    }
+    .select2-selection__choice__remove{
+    	color: white!important;
+    }
+	.select2-container--default.select2-container--focus .select2-selection--multiple{
+		height: 38px!important;		
+	}
+	.select2-container--default .select2-selection--multiple{
+		height: 38px!important;			
+	}
+
+}
+
+
+.select2-results__option{
+    font-family: Helvetica Neue!important;
+    font-weight: 300!important;
+    font-size: 15px!important;		
+}
+
+header{
+    height: 92px;
+}
+
+.tag-item{
+    padding: 5px !important;
+    background-color: white!important;
+    color: #DF0067 !important;
+    border-radius: 3px;	
+    display: inline;
+    margin-right: 6px;
+}
+
+.tags-display{
+	margin-top:11px;
+}
+
+.search-bar{
+	position: absolute;
+    right: 8%;	
+    .btn-outline-success{
+    	color:#DF0067;
+    	border-color: #DF0067;
+    }
+    .btn-outline-success:hover{
+    	color:#DF0067;
+    	border-color: #DF0067;  
+    	background:white;
+    }
+}
+
+.search-bar{
+	.select2-selection--multiple{
+	    width: 290px;
+	    height: 40px;
+	    margin-right: 47px;
+	}
+
+	.select2-selection__choice{
+	    padding: 3px !important;
+	    background-color: #DF0067 !important;
+	    color: white !important;		
+	}
+	.btn-outline-success{
+    	margin-left: 205px;
+	}	
+}
+
+a.nav-item:hover{
+	background-color:inherit!important;
+}
+

@@ -1,0 +1,16 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @snippet.name
+%p
+  %strong Url:
+  = @snippet.url
+%p
+  %strong Description:
+  = @snippet.description
+%p
+  %strong Code:
+  = @snippet.code
+= link_to 'Edit', edit_snippet_path(@snippet)
+|
+= link_to 'Back', snippets_path

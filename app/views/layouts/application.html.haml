@@ -1,0 +1,24 @@
+!!!
+%html
+	%head
+	%meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+	%title Purr Code Pen
+	= csrf_meta_tags
+	= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+	= javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+	%link{:href => "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css", :rel => "stylesheet"}/
+	%script{:src => "https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"}
+	%body
+		%header.navbar.navbar-expand.navbar-dark.flex-column.flex-md-row.bd-navbar
+			.navbar-nav-scroll
+				%ul.navbar-nav.bd-navbar-nav.flex-row
+					%a.nav-item{:href => "/"}
+						%img{src: "http://hack.purrdigital.com/css/images/logo.png"}
+			%form.form-inline.my-2.my-lg-0.search-bar{"action" => "/search"}
+				%select.form-control.tag-selector{:name => "tags[]", :multiple =>"multiple", :placeholder => "Search by tags"}
+					-Tag.all.each do |tag|
+						%option{:value => tag.name}
+							=tag.name
+				%button.btn.btn-outline-success.my-2.my-sm-0{:type => "submit"} Search
+		.container
+			= yield

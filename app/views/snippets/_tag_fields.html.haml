@@ -1,0 +1,5 @@
+.nested-fields
+	.field.form-group
+		= f.label 'Add name of tag here'
+		= f.text_field :name, class: 'form-control'
+	= link_to_remove_association "remove tag", f

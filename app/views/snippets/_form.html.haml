@@ -1,0 +1,33 @@
+= form_with(model: snippet, local: true, :html => {:class => 'col-12'}) do |form|
+  - if snippet.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(snippet.errors.count, "error")
+        prohibited this snippet from being saved:
+      %ul
+        - snippet.errors.full_messages.each do |message|
+          %li= message
+  %h5 Do you have something useful you want the team to see?
+  .row
+    .col-6
+      .field.form-group
+        = form.label 'Give it a name'
+        = form.text_field :name, id: :snippet_name, class: 'form-control', maxlength: 50
+      .field.form-group
+        = form.label 'Is there a link to a github page where youve put this into action?'
+        = form.text_field :url, id: :snippet_url, class: 'form-control'
+    .col-6
+      .field.form-group
+        = form.label 'What does this do?'
+        = form.text_field :description, id: :snippet_description, class: 'form-control', maxlength: 200
+      .field.form-group.tag-container
+        %h5 Add some tags to make it easier to search for
+        %select.form-control.tag-selector{:name => "tags[]", :multiple =>"multiple"}
+          -Tag.all.each do |tag|
+            %option{:value => tag.name}
+              =tag.name
+  .field.form-group
+    = form.label 'Put your code down here sucker'
+    = form.text_area :code, id: :snippet_code, class: 'form-control'
+  .actions
+    = form.submit class: 'btn btn-primary'
