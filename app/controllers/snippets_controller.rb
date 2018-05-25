@@ -38,7 +38,7 @@ class SnippetsController < ApplicationController
         params["tags"].each do |tag|
           SnippetTag.create(tag_id: Tag.find_by(name: tag).id, snippet_id: @snippet.id)     
         end
-        format.html { redirect_to @snippet, notice: 'Snippet was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Snippet was successfully created.' }
         format.json { render :show, status: :created, location: @snippet }
       else
         format.html { render :new }

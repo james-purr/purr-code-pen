@@ -12,14 +12,14 @@
     .col-6
       .field.form-group
         = form.label 'Give it a name'
-        = form.text_field :name, id: :snippet_name, class: 'form-control', maxlength: 50
+        = form.text_field :name, id: :snippet_name, class: 'form-control', maxlength: 50, required: true
       .field.form-group
         = form.label 'Is there a link to a github page where youve put this into action?'
         = form.text_field :url, id: :snippet_url, class: 'form-control'
     .col-6
       .field.form-group
         = form.label 'What does this do?'
-        = form.text_field :description, id: :snippet_description, class: 'form-control', maxlength: 200
+        = form.text_field :description, id: :snippet_description, class: 'form-control', maxlength: 200, required: true
       .field.form-group.tag-container
         %h5 Add some tags to make it easier to search for
         %select.form-control.tag-selector{:name => "tags[]", :multiple =>"multiple"}
